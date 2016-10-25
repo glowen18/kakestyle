@@ -8,7 +8,7 @@ class GarmentsController < ApplicationController
   def create
     @garment = Garment.new(garment_params)
 
-    if garment.save
+    if @garment.save
       redirect_to @garment
     else
       render :new
